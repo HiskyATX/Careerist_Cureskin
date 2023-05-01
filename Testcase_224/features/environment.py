@@ -3,7 +3,6 @@ from selenium import webdriver
 from selenium.webdriver.firefox.service import Service
 from selenium.webdriver.support.wait import WebDriverWait
 from app.application import Application
-#CH
 
 
 def browser_init(context):
@@ -23,6 +22,14 @@ def browser_init(context):
     context.driver.wait = WebDriverWait(context.driver, 10)
     context.app = Application(driver=context.driver)
 
+
+    ##HEADLESS_OPTIONS:##
+    # options = webdriver.ChromeOptions()
+    # options.add_argument('--headless')
+    # context.driver = webdriver.Chrome(
+    #     chrome_options=options,
+    #         service = service
+    # )
 
 
 def before_scenario(context, scenario):
