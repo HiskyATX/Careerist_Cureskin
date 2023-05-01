@@ -1,6 +1,7 @@
 from pages.base_page import Page
 from selenium.webdriver.common.by import By
-
+from selenium.webdriver.support import expected_conditions as EC
+#CH
 
 class MainPage(Page):
     PRODUCT_COUNT = (By.XPATH, "//*[@id='ProductCount']")
@@ -13,13 +14,12 @@ class MainPage(Page):
 
     def open_main_url(self):
         self.open_url('https://shop.cureskin.com/')
-        #self.wait_for_element_appear(*self.SHOP_ALL)
-
+        self.wait_for_element_appear(*self.SHOP_ALL)
+        #self.driver.until(EC.element_located_to_be_selected(*self.SHOP_ALL))
 
     # def search_for_cure(self):
     #     self.open_url('https://shop.cureskin.com/search?q=cure')
     #     self.wait_for_element_appear(*self.PRODUCT_COUNT)
-
 
     def find_element_text(self):
         actual_search = self.driver.find_element(*self.PRODUCT_COUNT).text

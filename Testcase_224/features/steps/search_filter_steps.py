@@ -4,6 +4,7 @@ from selenium.webdriver.common.action_chains import ActionChains
 from pages.base_page import Page
 from selenium.webdriver.common.by import By
 from pages.main_page import MainPage
+#CH
 
 @given('Open Cureskin page')
 def open_cureskin_page(self):

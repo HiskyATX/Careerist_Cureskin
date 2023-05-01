@@ -1,4 +1,5 @@
 Feature: Verify correct search results are shown when sliding filters
+  #CH
 
   Scenario: CAP224 - When sliding filters correct number of products are shown
     Given Open Cureskin page
